@@ -75,13 +75,31 @@ a{color:var(--pinho);text-underline-offset:3px}
 @media (min-width:820px){.nav a.link{display:inline-block}}
 
 /* Hero */
-.hero{padding:56px 0 40px}
+.hero{padding:28px 0 36px}
 .hero-grid{display:grid;gap:44px;align-items:center}
 @media (min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr}.hero{padding:84px 0 56px}}
 .hero .lead{font-size:clamp(1.12rem,2.2vw,1.3rem);color:var(--cinza);max-width:34ch}
-.acoes{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 18px}
+.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin:22px 0 0}
+.acoes .btn-prim{flex:1 1 100%}
+@media (min-width:600px){.acoes .btn-prim{flex:0 0 auto}}
+.link-sec{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--pinho)}
+.resumo{display:flex;gap:16px;align-items:center;margin:22px 0 0;padding:14px;background:#fff;border-radius:var(--r);box-shadow:0 0 0 1px var(--linha)}
+.resumo img{width:78px;height:auto;aspect-ratio:660/934;border-radius:3px 7px 7px 3px;box-shadow:0 6px 14px rgba(18,48,42,.22);flex:none}
+.resumo ul{list-style:none;margin:0;padding:0;font-size:.97rem;line-height:1.35}
+.resumo li{display:grid;grid-template-columns:20px 1fr;gap:8px;padding:3px 0}
+.resumo li svg{width:18px;height:18px;color:var(--pinho);margin-top:2px}
+.resumo .preco-mini{font:800 1.25rem/1.2 var(--display);color:var(--pinho)}
+@media (min-width:900px){.resumo img{display:none}.resumo{max-width:440px}}
+.capa-wrap{display:none}
+@media (min-width:900px){.capa-wrap{display:flex}}
+.previa{display:grid;gap:16px;margin-top:30px}
+@media (min-width:760px){.previa{grid-template-columns:1fr 1fr;gap:24px}}
+.previa figure{margin:0}
+.previa img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r);outline:1px solid rgba(0,0,0,.1);outline-offset:-1px}
+.previa figcaption{margin-top:8px;font-size:.95rem;color:var(--cinza)}
+.taxa{margin:10px 0 0;font-size:.88rem;color:var(--cinza)}
 .miudo{font-size:.95rem;color:var(--cinza);margin:0}
-.capa-wrap{display:flex;justify-content:center}
+.capa-wrap{justify-content:center}
 .capa{width:min(330px,82vw);aspect-ratio:660/934;overflow:hidden;border-radius:6px 16px 16px 6px;box-shadow:0 1px 2px rgba(18,48,42,.18),0 12px 28px rgba(18,48,42,.18),0 40px 70px -30px rgba(18,48,42,.45);transform:rotate(-2.5deg)}
 .capa img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
 
@@ -220,12 +238,12 @@ a{color:var(--pinho);text-underline-offset:3px}
 .voltar{margin-bottom:28px}
 
 /* Cookies */
-.cookies{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:560px;margin-left:auto;background:#fff;color:var(--tinta);border-radius:18px;padding:20px;box-shadow:0 0 0 1px rgba(23,32,29,.08),0 10px 30px rgba(23,32,29,.18);max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain}
+.cookies{position:fixed;left:10px;right:10px;bottom:10px;z-index:50;max-width:520px;margin-left:auto;background:#fff;color:var(--tinta);border-radius:16px;padding:14px 16px;box-shadow:0 0 0 1px rgba(23,32,29,.08),0 10px 30px rgba(23,32,29,.18);max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain}
 .cookies[hidden]{display:none}
-.cookies h2{font-size:1.2rem;margin-bottom:.4em}
-.cookies p{font-size:.95rem;color:var(--cinza);margin-bottom:.8em}
+.cookies h2{font-size:1.05rem;margin-bottom:.3em}
+.cookies p{font-size:.88rem;line-height:1.45;color:var(--cinza);margin-bottom:.7em}
 .cookies .botoes{display:flex;flex-wrap:wrap;gap:8px}
-.cookies .botoes .btn{flex:1 1 auto}
+.cookies .botoes .btn{flex:1 1 0;min-height:44px;padding:0 10px;font-size:.9rem}
 .prefs{border-top:1px solid var(--linha);margin:12px 0 14px;padding-top:6px}
 .prefs[hidden]{display:none}
 .opt{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:12px 0;border-bottom:1px solid var(--linha)}
@@ -243,6 +261,7 @@ a{color:var(--pinho);text-underline-offset:3px}
 /* Barra fixa no celular */
 .barra-cel{position:fixed;left:0;right:0;bottom:0;z-index:15;background:rgba(245,247,244,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--linha);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform 250ms cubic-bezier(.2,0,0,1)}
 .barra-cel.on{transform:none}
+.barra-cel .btn{white-space:nowrap;flex:none}
 .barra-cel b{font:800 1.3rem/1 var(--display);color:var(--pinho)}
 .barra-cel span{display:block;font-size:.82rem;color:var(--cinza)}
 @media (min-width:900px){.barra-cel{display:none}}
@@ -305,11 +324,18 @@ a{color:var(--pinho);text-underline-offset:3px}
         <div>
           <h1 id="titulo" class="entra">Quando eu saio, ele sofre.</h1>
           <p class="lead entra d1">Um plano de 21 dias, gentil e sem punição, para ensinar seu cachorro que ficar sozinho em casa é seguro e que você sempre volta.</p>
-          <div class="acoes entra d2">
-            <a class="btn btn-prim js-comprar js-checkout" href="#oferta">Comprar o guia por <span class="js-preco num">R$ 27</span></a>
-            <a class="btn btn-linha" href="#dentro">Ver o que tem dentro</a>
+          <div class="resumo entra d2">
+            <img src="capa.jpg" width="660" height="934" alt="">
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><span class="preco-mini js-preco num">R$ 27</span>, pagamento único no Pix ou cartão</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Guia em PDF com <span class="js-paginas">23</span> páginas e fotos, direto no seu e-mail</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>7 dias para desistir, com o dinheiro de volta</span></li>
+            </ul>
           </div>
-          <p class="miudo entra d3">Ebook em PDF, enviado por e-mail após a compra. Você tem 7 dias para desistir e receber o dinheiro de volta.</p>
+          <div class="acoes entra d3" id="cta-hero">
+            <a class="btn btn-prim js-comprar js-checkout" href="#oferta">Comprar o guia por <span class="js-preco num">R$ 27</span></a>
+            <a class="link-sec" href="#dentro">Ver o que tem dentro</a>
+          </div>
         </div>
         <div class="capa-wrap entra d2">
           <div class="capa"><img src="capa.jpg" width="660" height="934" alt="Capa do ebook Quando Eu Saio, Ele Sofre, da Cão Educa: um cachorro caramelo deitado no chão olhando para a porta."></div>
@@ -349,6 +375,17 @@ a{color:var(--pinho);text-underline-offset:3px}
         <li><svg aria-hidden="true"><use href="#i-chave"/></svg><div><strong>Fica agitado quando você pega a chave</strong><span>te segue pela casa, ofega ou se esconde.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-festa"/></svg><div><strong>Faz uma festa enorme quando você chega</strong><span>e demora muito para se acalmar.</span></div></li>
       </ul>
+    </div>
+  </section>
+
+  <section class="secao" aria-labelledby="t-previa" style="padding-top:0">
+    <div class="wrap">
+      <h2 id="t-previa">Uma espiada no guia</h2>
+      <p>Textos curtos, passo a passo e fotos para você visualizar cada etapa.</p>
+      <div class="previa">
+        <figure><img src="previa-saida.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Cachorro caramelo olhando para a tutora enquanto ela calça o tênis segurando as chaves."><figcaption>Semana 2: tirar o peso da chave, do tênis e da bolsa.</figcaption></figure>
+        <figure><img src="previa-treino.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Cachorro deitado tranquilo na caminha enquanto a tutora sai pela porta."><figcaption>O cantinho de segurança e as primeiras ausências curtas.</figcaption></figure>
+      </div>
     </div>
   </section>
 
@@ -483,6 +520,7 @@ a{color:var(--pinho);text-underline-offset:3px}
             <li><svg aria-hidden="true"><use href="#i-check"/></svg>Envio automático por e-mail</li>
           </ul>
           <a class="btn btn-prim js-comprar js-checkout" href="#oferta">Comprar agora</a>
+          <p class="taxa">No checkout, a Cakto acrescenta uma taxa de serviço de R$ 0,99.</p>
           <p class="aviso-link" role="status" id="aviso-link">O link de pagamento ainda não foi configurado. Preencha <code>checkoutUrl</code> no CONFIG.</p>
           <p class="miudo" style="margin-top:14px">Pagamento processado com segurança pela <span class="js-plataforma">plataforma de pagamento</span>. Ao comprar, você concorda com os <a href="#termos">Termos de uso</a>.</p>
         </div>
@@ -730,7 +768,8 @@ const CONFIG = {
     const y = window.scrollY;
     const r = oferta.getBoundingClientRect();
     const naOferta = r.top < window.innerHeight && r.bottom > 0;
-    barraEl.classList.toggle('on', !legal && y > 640 && !naOferta && document.getElementById('cookies-banner').hidden);
+    const ctaTopo = document.getElementById('cta-hero'); const passouTopo = ctaTopo ? ctaTopo.getBoundingClientRect().bottom < 0 : y > 640;
+    barraEl.classList.toggle('on', !legal && passouTopo && !naOferta && document.getElementById('cookies-banner').hidden);
   }
   window.addEventListener('scroll', barra, {passive:true});
 
@@ -768,7 +807,8 @@ const CONFIG = {
   $$('.js-abrir-cookies').forEach(b => b.addEventListener('click', () => { abrir(); btnPers.click(); }));
 
   const atual = ler();
-  if(atual) aplicar(atual); else banner.hidden = false;
+  // Sem pixel configurado o site não usa cookies opcionais, então não mostra o banner.
+  if(atual) aplicar(atual); else if(CONFIG.metaPixelId) banner.hidden = false;
   rota();
 })();
 </script>
