@@ -240,7 +240,7 @@ a{color:var(--pinho);text-underline-offset:3px}
 /* Cookies */
 .cookies{position:fixed;left:10px;right:10px;bottom:10px;z-index:50;max-width:520px;margin-left:auto;background:#fff;color:var(--tinta);border-radius:16px;padding:14px 16px;box-shadow:0 0 0 1px rgba(23,32,29,.08),0 10px 30px rgba(23,32,29,.18);max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain}
 .cookies[hidden]{display:none}
-.cookies h2{font-size:1.05rem;margin-bottom:.3em}
+.cookies h2{font-size:1rem;margin-bottom:.25em}
 .cookies p{font-size:.88rem;line-height:1.45;color:var(--cinza);margin-bottom:.7em}
 .cookies .botoes{display:flex;flex-wrap:wrap;gap:8px}
 .cookies .botoes .btn{flex:1 1 0;min-height:44px;padding:0 10px;font-size:.9rem}
@@ -696,7 +696,7 @@ a{color:var(--pinho);text-underline-offset:3px}
 <!-- Banner de cookies -->
 <section class="cookies" id="cookies-banner" role="dialog" aria-labelledby="ck-t" aria-describedby="ck-d" hidden>
   <h2 id="ck-t">Sua privacidade</h2>
-  <p id="ck-d">Usamos cookies necessários para o site funcionar. Com a sua permissão, também usamos cookies de medição e o pixel da Meta para anúncios, que podem enviar dados para fora do Brasil. Saiba mais na <a href="#cookies">Política de cookies</a>.</p>
+  <p id="ck-d">Com a sua permissão, usamos o pixel da Meta para medir os anúncios. Os dados podem ser enviados para fora do Brasil. <a href="#cookies">Política de cookies</a>.</p>
   <div class="prefs" id="ck-prefs" hidden>
     <div class="opt"><div><label for="ck-nec">Necessários</label><small>Sempre ativos.</small></div><span class="chave"><input type="checkbox" id="ck-nec" checked disabled><span></span></span></div>
     <div class="opt"><div><label for="ck-med">Medição</label><small>Contagem de visitas para melhorar o site.</small></div><span class="chave"><input type="checkbox" id="ck-med"><span></span></span></div>
@@ -706,7 +706,7 @@ a{color:var(--pinho);text-underline-offset:3px}
     <button type="button" class="btn btn-linha btn-peq" id="ck-recusar">Recusar</button>
     <button type="button" class="btn btn-linha btn-peq" id="ck-personalizar">Personalizar</button>
     <button type="button" class="btn btn-linha btn-peq" id="ck-salvar" hidden>Salvar escolhas</button>
-    <button type="button" class="btn btn-prim btn-peq" id="ck-aceitar">Aceitar todos</button>
+    <button type="button" class="btn btn-prim btn-peq" id="ck-aceitar">Aceitar</button>
   </div>
 </section>
 
